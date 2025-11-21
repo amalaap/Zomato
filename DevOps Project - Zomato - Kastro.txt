@@ -691,6 +691,7 @@ sudo vi /etc/prometheus/prometheus.yml ----> Paste the below commands at the bot
     metrics_path: '/metrics'
     static_configs:
       - targets: ['nodeIP:9100']
+change done
 
 In the above, to get the "nodeIP", goto EKS in AWS ----> Click on EKS Cluster ----> "Compute" tab ----> Nodes ----> Click on any one node ----> Click on the "instance id" ----> Copy the public ip ----> Paste in the above script
 
@@ -711,6 +712,7 @@ Kind Request:
 Once after you have successfully deployed the App, kindly share your experience on LinkedIn by Tagging me and also provide the YouTube link of this project in your post, as it helps others to access the video quickly. 
 ========================================================================================================
 												HAPPY LEARNING
+
 
 
 
