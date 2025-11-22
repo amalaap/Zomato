@@ -9,13 +9,13 @@ pipeline {
         
         stage ("Git Checkout") {
             steps {
-                git 'https://github.com/santhoshkumarymail-prog/Zomato.git'
+                git 'https://github.com/amalaap/Zomato.git'
             }
         }
         
         stage ("Build Docker Image") {
             steps {
-                sh "docker build -t santhoshky/zomatoapp:1.0 ."
+                sh "docker build -t amala2025/zomatoapp:1.0 ."
             }
         }
         stage ("Tag & Push to DockerHub") {
@@ -23,7 +23,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'docker-login', passwordVariable: 'dockerhubpass', usernameVariable: 'dockerhublogin')]) {
                         sh 'docker login -u ${dockerhublogin} -p ${dockerhubpass}'
-                        sh "docker push santhoshky/zomatoapp:1.0 "
+                        sh "docker push amala2025/zomatoapp:1.0 "
                     }
                 }
             }
